@@ -91,7 +91,7 @@ header {
 }
 
 .button_head .left_button {
-  color: #F5F5DC;
+  color: #f9f9ff;
   background-color: #D29CFF;
   font-size: 30px;
   padding: 5px 10px;
@@ -172,7 +172,7 @@ header {
   .window_menu {
     position: fixed;
     display: block;
-    background-color: #EEEBE6;
+    background-color: #e9e9f3;
     height: 100%;
     right: -100%; /* Скрываем элемент за пределами экрана */
     top: 0; /* Фиксируем элемент сверху */
@@ -263,12 +263,12 @@ header {
   display: -ms-flexbox;
   display: flex;
   justify-content: center;
-  background-color: #EEEBE6;
+  background-color: #e9e9f3;
 }
 
 .diplomas_box {
-  color: #414141;
-  background-color: #EEEBE6;
+  color: #000000;
+  background-color: #e9e9f3;
   font-size: 30px;
   text-align: center;
   padding: 30px;
@@ -339,62 +339,47 @@ header {
   background-color: #f9f9ff;
   font-size: 26px;
 }
-
 .about_me .title {
   font-size: 40px;
   padding: 20px 0px;
   text-align: center;
 }
-
-/* box_wide */
 .about_me .box_wide {
   display: flex;
-}
-
-.about_me .box_wide {
   padding: 40px 0px;
 }
-
-/* box_wide box_photo */
 .about_me .box_wide .box_photo {
   padding: 0px 50px;
   width: 30%;
 }
-
 .about_me .box_wide .box_photo .name {
+  color: #9966cc;
   display: none;
 }
-
 .about_me .box_wide .box_photo img {
-  border: 2px solid #B39F7A;
+  border: 2px solid #D29CFF;
 }
-
-/* box_wide box_description */
 .about_me .box_wide .box_description {
   padding: 0px 50px;
   width: 70%;
 }
-
 .about_me .box_wide .box_description a {
   text-decoration: none;
   color: #000000;
 }
-
 .about_me .box_wide .box_description .name {
+  color: #9966cc;
   font-size: 32px;
   padding-bottom: 20px;
 }
-
 .about_me .box_wide .box_description .list_massnger {
   padding-top: 60px;
 }
-
 .about_me .box_wide .box_description .list_massnger .massengers {
   padding-bottom: 10px;
 }
-
 .about_me .box_wide .box_description .list_massnger .name_massenger {
-  color: #B39F7A;
+  color: #9966cc;
 }
 
 /* box_narrow */
@@ -407,7 +392,6 @@ header {
   .about_me .box_wide .box_photo {
     width: 50%;
   }
-  /* box_wide box_description */
   .about_me .box_wide .box_description {
     width: 50%;
   }
@@ -434,7 +418,6 @@ header {
   .about_me .box_wide .box_description .list_massnger {
     display: none;
   }
-  /* box_narrow */
   .about_me .box_narrow {
     display: block;
     padding-bottom: 50px;
@@ -442,7 +425,6 @@ header {
   .about_me .box_narrow .description {
     display: none;
   }
-  /* box_narrow list_massnger */
   .about_me .box_narrow .list_massnger {
     display: block;
     padding: 0px 50px;
@@ -451,7 +433,7 @@ header {
     padding-bottom: 10px;
   }
   .about_me .box_narrow .list_massnger .massengers .name_massenger {
-    color: #B39F7A;
+    color: #9966cc;
   }
   .about_me .box_narrow .list_massnger .massengers a {
     text-decoration: none;
@@ -468,10 +450,9 @@ header {
   .about_me .box_wide .box_photo {
     padding-left: 20px;
   }
-  .about_me .box_wide .box_description {
+  .about_me .box_wide box_description {
     padding-right: 20px;
   }
-  /* box_narrow list_massnger */
   .about_me .box_narrow .list_massnger {
     padding: 0px 20px;
   }
@@ -540,7 +521,7 @@ header {
 /*      My Works      */
 /*--------------------*/
 .my_works {
-  background-color: #B39F7A;
+  background-color: #e9e9f3;
   display: flex;
   justify-content: center;
 }
@@ -561,30 +542,28 @@ header {
   justify-content: center;
   align-items: center;
 }
-
 .my_works .videos .arrow {
   font-size: 60px;
   padding: 0px 30px;
-  color: #F5F5DC;
+  color: #D29CFF;
   background: none; /* Убирает фоновый цвет */
   border: none; /* Убирает рамку */
 }
-
 .my_works .videos .video {
   margin: 30px 0px;
   width: 40%;
-  border: 5px solid #F5F5DC;
+  border: 5px solid #D29CFF;
 }
-
 .my_works .videos .video_1 {
   display: block;
 }
-
 .my_works .videos .video_2 {
   display: none;
 }
-
 .my_works .videos .video_3 {
+  display: none;
+}
+.my_works .videos .video_4 {
   display: none;
 }
 
@@ -695,26 +674,24 @@ header {
   justify-content: space-evenly;
   background-color: #f9f9ff;
 }
-
 .procedure_photos .title {
+  color: #D29CFF;
   order: -1;
   width: 100%;
   text-align: center;
   font-size: 40px;
   margin: 20px 0px;
 }
-
 .procedure_photos .photo {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
   width: 20%;
-  border: 2px solid #B39F7A;
+  border: 2px solid #D29CFF;
   margin: 50px 0px;
   object-fit: contain; /* изображение будет масштабироваться, сохраняя свои пропорции */
 }
-
 .procedure_photos .photo_scroll {
   display: none;
 }
@@ -756,7 +733,7 @@ header {
   }
   .procedure_photos .photo_scroll .arrow {
     font-size: 60px;
-    color: #B39F7A;
+    color: #D29CFF;
     padding: 0px 10px;
     background: none;
     border: none;
@@ -771,7 +748,7 @@ header {
     align-items: center; /* Поперечная */
     margin: 20px 0px;
     width: 60%;
-    border: 2px solid #B39F7A;
+    border: 2px solid #D29CFF;
     object-fit: contain;
   }
   .procedure_photos .photo_scroll .photo_1 {
@@ -811,12 +788,11 @@ header {
 /*  Google Map  */
 /*--------------*/
 .google_map {
-  background-color: #B39F7A;
+  background-color: #e9e9f3;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .google_map .title {
   width: 100%;
   font-size: 40px;
@@ -824,7 +800,6 @@ header {
   color: #F5F5DC;
   padding: 20px 0px;
 }
-
 .google_map .map {
   background-color: #F5F5DC;
   border: 5px solid #F5F5DC;
@@ -835,7 +810,7 @@ header {
 /*      footer      */
 /*------------------*/
 footer {
-  background-color: #B39F7A;
+  background-color: #e9e9f3;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -850,11 +825,12 @@ footer {
 }
 
 .footer_box a {
-  color: #F5F5DC;
+  color: #000000;
   text-decoration: none;
 }
 
 .chief_items {
+  color: #9966cc;
   font-size: 20px;
   padding-bottom: 10px;
 }
@@ -891,6 +867,7 @@ a {
     display: none;
   }
   footer .chief_map {
+    color: #9966cc;
     font-size: 30px;
     display: flex;
     margin: 10px;
@@ -927,16 +904,3 @@ a {
 ::-webkit-scrollbar-track {
   background-color: #F5F5DC;
 }
-
-/* anchors */
-/* 
-  Three Diplomas
-  Main Photo
-  My Works
-  Procedure Photos
-  Google Map
-*/
-/* 
-  justify-content - Главная
-  align-items - Поперечная
-*/
