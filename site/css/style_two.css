@@ -1,3 +1,32 @@
+/*Chrome and Safari*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #D29CFF;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #9966cc;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e9e9f3;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #D29CFF #e9e9f3;
+  border-radius: 5px;
+}
+
+*:hover {
+  scrollbar-color: #9966cc #e9e9f3;
+}
+
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -20,9 +49,8 @@ img {
 }
 
 body {
-  /* min-width: 485px;  */
   font-family: "Raleway", sans-serif;
-  background-color: #F5F5DC;
+  background-color: #f9f9ff;
 }
 
 header {
@@ -32,7 +60,7 @@ header {
   top: 0;
   z-index: 1000;
   display: flex;
-  background-color: #B39F7A;
+  background-color: #e9e9f3;
   font-size: 30px;
   padding: 10px 0;
   width: 100%;
@@ -54,11 +82,11 @@ header .sing_up {
 
 header a {
   text-decoration: none;
-  color: #F5F5DC;
+  color: #000;
 }
 
 .my_phrase {
-  color: #312e1e;
+  color: #9966cc;
   font-size: 40px;
   text-transform: uppercase;
   text-align: center;
@@ -73,7 +101,7 @@ main {
 }
 
 .type_procedure {
-  color: #312e1e;
+  color: #D29CFF;
   font-size: 40px;
   text-transform: uppercase;
   text-align: center;
@@ -87,8 +115,9 @@ main {
   display: flex;
   flex-direction: column;
   font-size: 30px;
+  background-color: #e9e9f3;
   margin: 0 10% 20px 10%;
-  border: 2px solid #B39F7A;
+  border: 1px solid #000;
 }
 
 /*  procedure  */
@@ -98,7 +127,7 @@ main {
 }
 
 .name_procedure {
-  color: #B39F7A;
+  color: #000;
   margin: 20px 0px 20px 20px;
 }
 
@@ -124,13 +153,13 @@ main {
 }
 
 .procedure_duration {
-  color: #B39F7A;
+  color: #9966cc;
 }
 
 /* button */
 .box_procedure button {
-  background: #B39F7A;
-  color: #F5F5DC;
+  background-color: #D29CFF;
+  color: #e9e9f3;
   padding: 5px;
   margin: 0px 0px 20px 20px;
   border: none;
@@ -267,5 +296,10 @@ main {
   }
   .box_buttons .button_close {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-weight: 550;
   }
 }

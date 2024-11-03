@@ -3,6 +3,31 @@ $bg_second: #e9e9f3;
 $pale_lilac: #D29CFF;
 $amethyst: #9966cc;
 
+/*Chrome and Safari*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $pale_lilac;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: $amethyst;
+}
+::-webkit-scrollbar-track {
+  background-color: $bg_second;
+}
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #{$pale_lilac} #{$bg_second};
+  border-radius: 5px;
+}
+*:hover {
+  scrollbar-color: #{$amethyst} #{$bg_second};
+}
+
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -22,7 +47,6 @@ img {
 }
 body {
   font-family: "Raleway", sans-serif;
-  /* min-width: 1300px; */
 }
 header {
   background: $bg_first;
@@ -225,6 +249,7 @@ header {
     border-bottom: none;
   }
   .window_menu a{
+    color: $amethyst;
     font-size: 25px;
   }
 
@@ -581,7 +606,7 @@ header {
   align-items: center;
 
   .arrow{
-    font-size: 60px;
+    font-size: 40px;
     padding: 0px 30px;
     color: $pale_lilac;
     background: none; /* Убирает фоновый цвет */
@@ -781,7 +806,7 @@ header {
       width: 80%;
       height: 520px;
       .arrow{
-        font-size: 60px;
+        font-size: 40px;
         color: $pale_lilac;
         padding: 0px 10px;
         background: none;
@@ -792,7 +817,7 @@ header {
   }
    
   .my_works .videos .arrow{
-    font-size: 60px;
+    font-size: 40px;
     padding: 0px 10px;
   }
 
@@ -883,14 +908,15 @@ footer {
   justify-content: space-evenly;
 }
 
+
 .footer_box{
   display: flex;
   flex-direction: column;
   padding: 20px 0 50px 0;
-}
-.footer_box a{
-  color: #000000;
-  text-decoration: none;
+  a{
+    color: #000000;
+    text-decoration: none;
+  }
 }
 .chief_items{
   color: $amethyst;
@@ -914,25 +940,26 @@ a {
 }
 
 @media screen and (max-width: 880px){
-  footer .footer_box_1{
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px){
   footer{
-    display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-  }
-  footer .footer_box_2{
-    display: none;
-  }
-  footer .chief_map{
-    color: $amethyst;
-    font-size: 30px;
-    display: flex;
-    margin: 10px;
+
+    .footer_box{
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer_box_1{
+      display: none;
+    }
+
+    .chief_map{
+      color: $amethyst;
+      font-size: 30px;
+      display: flex;
+      margin: 10px;
+    }
+
   }
 }
 
@@ -944,24 +971,14 @@ a {
   height: 210px;
   border: none;
   margin: 10px;
-}
-
-@media screen and (max-width: 900px){
-  .google_map .map iframe{
+  @media screen and (max-width: 900px){
     width: 80%;
   }
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: rgba(230, 214, 143, 0.5);
-  border-radius: 5px;
-}
-::-webkit-scrollbar-thumb:hover{
-  background-color: rgba(230, 214, 143, 1);
-}
-::-webkit-scrollbar-track {
-  background-color: #F5F5DC;
+
+@media screen and (max-width: 500px){
+  body {
+    font-weight: 550;
+  }
 }
