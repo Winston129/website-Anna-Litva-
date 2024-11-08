@@ -101,25 +101,40 @@ header {
   display: -ms-flexbox;
   display: flex;
 }
-.button_head .left_button {
-  color: $bg_first;
-  background-color: $pale_lilac;
-  font-size: 30px;
-  padding: 5px 10px;
-  border: 2px solid $pale_lilac;
-  border-radius: 10px;
+.button_head{
+  .left_button {
+    color: $bg_first;
+    background-color: $pale_lilac;
+    font-size: 30px;
+    padding: 5px 10px;
+    border: 2px solid $pale_lilac;
+    border-radius: 10px;
+    a{
+      color: $bg_first;
+      text-decoration: none;
+    }
+  }
+
+  .right_button {
+    color: $pale_lilac;
+    font-size: 30px;
+    padding: 5px 10px;
+    margin-left: 100px;
+    border: 2px solid $pale_lilac;
+    border-radius: 10px;
+    a {
+      color: $pale_lilac;
+      text-decoration: none;
+    }
+  }
 }
-.button_head .right_button {
-  color: $pale_lilac;
-  font-size: 30px;
-  padding: 5px 10px;
-  margin-left: 100px;
-  border: 2px solid $pale_lilac;
-  border-radius: 10px;
-}
-.button_head .right_button a {
-  color: $pale_lilac;
-  text-decoration: none;
+
+@media screen and (max-width: 944px){
+  .window_menu_ru{
+    .window_menu_name{
+      font-size: 20px;
+    }
+  }
 }
 
 @media screen and (max-width: 860px){
@@ -149,6 +164,15 @@ header {
   }
   .button_head .left_button {
   margin-left: 0px;
+  }
+  .button_head_ru{
+    justify-content: none;
+    align-items: end; /* Центрируем по вертикали внутри контейнера */
+    flex-direction: column;
+    padding-right: 30px;
+    .left_button{
+      margin-bottom: 10px;
+    }
   }
 }
 @media screen and (max-width: 720px){
@@ -315,6 +339,11 @@ header {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 725px){
+  .diplomas_box_ru{
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 672px){
   .diplomas_box:nth-child(2) {
     display: none;
@@ -422,7 +451,7 @@ header {
     .box_description{
       width: 50%;
       .description{
-        text-align: justify;
+        // text-align: justify;
       }
     }
   } 
@@ -929,6 +958,7 @@ footer {
 }
 .footer_box_google_map{
   padding-top: 10px;
+  text-align: center;
 }
 
 a {
@@ -972,7 +1002,7 @@ a {
   border: none;
   margin: 10px;
   @media screen and (max-width: 900px){
-    width: 80%;
+    // width: 100%;
   }
 }
 

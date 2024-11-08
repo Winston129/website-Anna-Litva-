@@ -126,7 +126,10 @@ header {
   border: 2px solid #D29CFF;
   border-radius: 10px;
 }
-
+.button_head .left_button a {
+  color: #f9f9ff;
+  text-decoration: none;
+}
 .button_head .right_button {
   color: #D29CFF;
   font-size: 30px;
@@ -135,12 +138,16 @@ header {
   border: 2px solid #D29CFF;
   border-radius: 10px;
 }
-
 .button_head .right_button a {
   color: #D29CFF;
   text-decoration: none;
 }
 
+@media screen and (max-width: 944px) {
+  .window_menu_ru .window_menu_name {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 860px) {
   .window_menu {
     float: none;
@@ -168,6 +175,15 @@ header {
   }
   .button_head .left_button {
     margin-left: 0px;
+  }
+  .button_head_ru {
+    justify-content: none;
+    align-items: end; /* Центрируем по вертикали внутри контейнера */
+    flex-direction: column;
+    padding-right: 30px;
+  }
+  .button_head_ru .left_button {
+    margin-bottom: 10px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -329,6 +345,11 @@ header {
     font-size: 30px;
   }
 }
+@media screen and (max-width: 725px) {
+  .diplomas_box_ru {
+    font-size: 20px;
+  }
+}
 @media screen and (max-width: 672px) {
   .diplomas_box:nth-child(2) {
     display: none;
@@ -423,9 +444,6 @@ header {
   }
   .about_me .box_wide .box_description {
     width: 50%;
-  }
-  .about_me .box_wide .box_description .description {
-    text-align: justify;
   }
 }
 @media screen and (max-width: 1140px) {
@@ -870,6 +888,7 @@ footer {
 
 .footer_box_google_map {
   padding-top: 10px;
+  text-align: center;
 }
 
 a {
@@ -908,12 +927,6 @@ a {
   border: none;
   margin: 10px;
 }
-@media screen and (max-width: 900px) {
-  .footer_box_google_map iframe {
-    width: 80%;
-  }
-}
-
 @media screen and (max-width: 500px) {
   body {
     font-weight: 550;
