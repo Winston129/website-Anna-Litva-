@@ -931,8 +931,6 @@ a {
   body {
     font-weight: 550;
   }
-<<<<<<< HEAD
-=======
 }
 /*--------------------------------*/
 /*    window "Make Appointment"   */
@@ -977,10 +975,5 @@ a {
   margin: 0px 20px;
 }
 .sub_window_make_appointment .buttons .select {
-<<<<<<< HEAD
-  margin: 20px;
->>>>>>> ad7aab0 (add (buy_procedure_ru.html))
-=======
   margin: 20px 0px;
->>>>>>> c625be6 (I corrected the errors and adjusted the dimensions, but it's the same (add ficha 'cope name procedur'))
 }
