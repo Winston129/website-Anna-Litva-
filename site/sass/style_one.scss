@@ -1011,4 +1011,41 @@ a {
   body {
     font-weight: 550;
   }
+<<<<<<< HEAD
+=======
+}
+
+/*--------------------------------*/
+/*    window "Make Appointment"   */
+/*--------------------------------*/
+.window_make_appointment{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.sub_window_make_appointment{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  background-color: $bg_first;
+
+  .text{
+    margin: 20px;
+  }
+  .buttons{
+    text-align: right;
+    margin: 0px 20px;
+    .select{
+      margin: 20px;
+    }
+  }
+>>>>>>> ad7aab0 (add (buy_procedure_ru.html))
 }

@@ -1,5 +1,10 @@
 {
 var button_read_more = Array.from(document.querySelectorAll(".box_procedure .box_buttons .button_read_more"));
+<<<<<<< HEAD
+=======
+var button_sign_up = Array.from(document.querySelectorAll(".box_procedure .box_buttons .button_sign_up"));
+var name_procedure_arr = Array.from(document.querySelectorAll(".name_procedure .procedure .name_procedure"));
+>>>>>>> ad7aab0 (add (buy_procedure_ru.html))
 var button_close =  Array.from(document.querySelectorAll(".box_procedure .button_close"));
 var box_description = Array.from(document.querySelectorAll(".box_procedure .box_description"));
 // var box_show_description_show = document.querySelector(".box_procedure .box_description.show");
@@ -68,4 +73,18 @@ function list_with_height(){
         console.log(arr_height[i]);
     }
     console.log("===============");
+<<<<<<< HEAD
 }
+=======
+}
+
+//=======================
+//  cope name procedure  
+//=======================
+console.log(button_sign_up);
+button_sign_up.map((button, index_button)=>{
+    button.addEventListener("click", ()=>{
+        navigator.clipboard.writeText(name_procedure_arr[index_button].innerText);
+    });
+});
+>>>>>>> ad7aab0 (add (buy_procedure_ru.html))

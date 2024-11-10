@@ -144,11 +144,18 @@ function func_open_photo(){
     });
 }
 
+<<<<<<< HEAD
 /*
 ====================
     Void all func   
 ====================
 */
+=======
+
+//====================
+//    Void all func   
+//====================
+>>>>>>> ad7aab0 (add (buy_procedure_ru.html))
 function Arrows(){
     var lift_arrow_1 = document.querySelector(".my_works .videos .left_arrow");
     var right_arrow_1 = document.querySelector(".my_works .videos .right_arrow");
@@ -163,10 +170,31 @@ function Arrows(){
     func_scroll(lift_arrow_2, right_arrow_2, list_video_2, false, "flex");
 }
 
+<<<<<<< HEAD
 func_sidebar();
 Arrows();
 func_open_photo();
 
+=======
+//====================
+//    Void all func   
+//====================
+function window_make_appointment(){
+    var left_button = document.querySelector(".left_button");
+    var window_make_appointment = document.querySelector(".window_make_appointment");
+
+    left_button.addEventListener("click", () => {
+        window_make_appointment.style.display = "flex";
+    });
+}
+
+
+
+func_sidebar();
+Arrows();
+func_open_photo();
+window_make_appointment()
+>>>>>>> ad7aab0 (add (buy_procedure_ru.html))
 
 /*
 ========================
@@ -181,5 +209,16 @@ function none(){
         // func_main_procedure();
     }
     video.pause();         // Останавливает воспроизведение видео
+<<<<<<< HEAD
     video.currentTime = 0; // Сбрасывает видео к началу
 }
+=======
+    video.currentTime = 0; // Сбрасывает видео к н z ачалу
+}
+
+/*
+cc
+c 
+\ rtcvb 
+*/
+>>>>>>> ad7aab0 (add (buy_procedure_ru.html))
