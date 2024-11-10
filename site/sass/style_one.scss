@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $bg_first: #f9f9ff;
 $bg_second: #e9e9f3;
 $pale_lilac: #D29CFF;
@@ -1061,3 +1062,1061 @@ a {
 =======
 }
 >>>>>>> c625be6 (I corrected the errors and adjusted the dimensions, but it's the same (add ficha 'cope name procedur'))
+=======
+$bg_first: #f9f9ff;
+$bg_second: #e9e9f3;
+$pale_lilac: #D29CFF;
+$amethyst: #9966cc;
+
+/*Chrome and Safari*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $pale_lilac;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: $amethyst;
+}
+::-webkit-scrollbar-track {
+  background-color: $bg_second;
+}
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #{$pale_lilac} #{$bg_second};
+  border-radius: 5px;
+}
+*:hover {
+  scrollbar-color: #{$amethyst} #{$bg_second};
+}
+
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+header {
+  background: $bg_first;
+  height: 100%;
+}
+.open_menu {
+  display: none;
+}
+.close_menu{
+  display: none;
+}
+.window_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+}
+.window_menu .window_menu_name {
+  margin: 16px 48px;
+  font-size: 25px;
+}
+.window_menu .window_menu_name:hover {
+  border-bottom: 2px solid $pale_lilac;
+}
+.window_menu a {
+  text-decoration: none;
+  color: #000000;
+}
+.a {
+  letter-spacing: -1px;
+}
+.ybeauty {
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 80px;
+  padding-bottom: 10px;
+  margin: 10px auto;
+}
+.head_box_welcome {
+  color: #000000;
+  padding-top: 10%;
+  padding-left: 10%;
+  width: 800px;
+}
+.head_description {
+  font-size: 22px;
+  text-align: justify;
+}
+.button_head {
+  padding: 3% 0% 3% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.button_head{
+  .left_button {
+    color: $bg_first;
+    background-color: $pale_lilac;
+    font-size: 30px;
+    padding: 5px 10px;
+    border: 2px solid $pale_lilac;
+    border-radius: 10px;
+    a{
+      color: $bg_first;
+      text-decoration: none;
+    }
+  }
+
+  .right_button {
+    color: $pale_lilac;
+    font-size: 30px;
+    padding: 5px 10px;
+    margin-left: 100px;
+    border: 2px solid $pale_lilac;
+    border-radius: 10px;
+    a {
+      color: $pale_lilac;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (max-width: 944px){
+  .window_menu_ru{
+    .window_menu_name{
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 860px){
+  .window_menu {
+    float: none;
+    border-bottom: 2px solid $pale_lilac;
+  }
+  .head_box_welcome {
+    padding: 10% 5% 0 5%;
+    width: 100%;
+  }
+  .window_menu .window_menu_name {
+    margin: 16px auto;
+    font-size: 25px;
+  }
+  .button_head {
+    padding: 3% 0% 3% 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Размещаем div рядом друг с другом */
+    justify-content: center; /* Центрируем по горизонтали внутри контейнера */
+    align-items: center; /* Центрируем по вертикали внутри контейнера */
+  }
+  .button_head .right_button {
+    text-align: center;
+    margin-left: 10%;
+  }
+  .button_head .left_button {
+  margin-left: 0px;
+  }
+  .button_head_ru{
+    justify-content: none;
+    align-items: end; /* Центрируем по вертикали внутри контейнера */
+    flex-direction: column;
+    padding-right: 30px;
+    .left_button{
+      margin-bottom: 10px;
+    }
+  }
+}
+@media screen and (max-width: 720px){
+  .open_menu {
+    background: none;
+    border: none;
+    display: block;
+    float: right;
+    font-size: 25px;
+    color: $amethyst;
+    margin: 20px;
+    
+  }
+  .close_menu{
+    background: $pale_lilac;
+    border: none;
+    display: flex;
+    float: right;
+    color: $bg_first;
+    font-size: 10px;
+    font-weight: bolder;
+    margin: 20px 20px 50px 20px;
+  }
+/* position: fixed:
+Элемент с этим свойством фиксируется относительно окна браузера,
+  а не относительно родительских элементов. Такой элемент остается
+  на одном месте в окне браузера при прокрутке страницы.
+Пример:
+  меню навигации, которое всегда остается в верхней части экрана. 
+*/
+  .window_menu {
+    position: fixed;
+    display: block;
+    background-color: $bg_second;
+    height: 100%;
+    right: -100%; /* Скрываем элемент за пределами экрана */
+    top: 0; /* Фиксируем элемент сверху */
+    border-bottom: none;
+  }
+  .window_menu_open{
+    animation: animation_window_menu_open 1s forwards;
+  }
+  @keyframes animation_window_menu_open {
+      0% {
+          right: -100%; /* Начальное положение за экраном */
+      }
+      100% {
+          right: 0; /* Конечное положение */
+      }
+  }
+
+  .window_menu_close{
+    animation: animation_window_menu_close 1s forwards;
+  }
+  @keyframes animation_window_menu_close {
+    0% {
+        right: 0; /* Начальное положение за экраном */
+    }
+    100% {
+        right: -100%; /* Конечное положение */
+    }
+}
+
+.window_menu .window_menu_name {
+  margin: 45px;
+  font-size: 30px;
+}
+.window_menu .window_menu_name:hover {
+  border-bottom: none;
+}
+.window_menu a{
+  color: $pale_lilac;
+  font-size: 30px;
+}
+
+  .button_head {
+    padding: 3% 5%;
+    display: flex; /* Размещаем div один под другим */
+    justify-content: center; /* Центрируем по горизонтали внутри контейнера */
+    align-items: end; /* Выравниваем по правому краю */
+    flex-direction: column; /* Размещаем div один под другим */
+    /* margin-right: 5%; */
+  }
+  .button_head .right_button {
+    text-align: center;
+    margin: 3% 0 0 0;
+  }
+  .button_head .left_button {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 500px){
+  .window_menu .window_menu_name {
+    margin: 40px;
+    font-size: 25px;
+  }
+  .window_menu .window_menu_name:hover {
+    border-bottom: none;
+  }
+  .window_menu a{
+    color: $amethyst;
+    font-size: 25px;
+  }
+
+  .ybeauty{
+    font-size: 50px;
+  }
+  .head_description{
+    font-size: 16px;
+  }
+  .button_head .right_button {
+    font-size: 20px;
+  }
+  .button_head .left_button {
+    font-size: 20px;
+  }
+}
+
+
+/*--------------------------*/
+/*      Three Diplomas      */
+/*--------------------------*/
+.diploma_awardees{
+  display: none;
+}
+.three_diplomas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  background-color: $bg_second;
+}
+.diplomas_box {
+  color: #000000;
+  background-color: $bg_second;
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+  margin: 0% 5%;
+}
+.plus {
+  color: $amethyst;
+  font-size: 35px;
+}
+
+@media screen and (max-width: 1000px){
+  .three_diplomas {
+    justify-content: space-between;
+  }
+  .diplomas_box {
+    font-size: 25px;
+    margin: 0%;
+  }
+  .diplomas_box .plus{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 720px){
+  .diplomas_box {
+    font-size: 25px;
+  }
+  .plus {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 725px){
+  .diplomas_box_ru{
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 672px){
+  .diplomas_box:nth-child(2) {
+    display: none;
+  }
+  .diplomas_box {
+    margin: 0% 5%;
+  }
+}
+@media screen and (max-width: 500px){
+  .diploma_awardees{
+    display: block;
+    text-align: center;
+    color: #000000;
+    font-size: 30px;
+    margin: 20px;
+  }
+  .three_diplomas {
+    flex-direction: column;
+    background-color: $bg_first;
+  }
+  .diplomas_box:nth-child(2) {
+    display: block;
+  }
+  .diplomas_box {
+    color: #000000;
+    font-size: 20px;
+    border: 20px solid $bg_first;
+  }
+  .diplomas_box .plus {
+    font-size: 22px;
+  }
+}
+
+/*----------------------*/
+/*      Main Photo      */
+/*----------------------*/
+.about_me{
+  background-color: $bg_first;
+  font-size: 26px;
+  
+
+  .title{
+    font-size: 40px;
+    padding: 20px 0px;
+    text-align: center;
+  }
+
+
+  .box_wide {
+    display: flex;
+    padding: 40px 0px;
+
+    .box_photo{
+      padding: 0px 50px;
+      width: 30%;
+      .name{
+        color: $amethyst;
+        display: none;
+      }
+      img{
+        border: 2px solid $pale_lilac;
+      }
+    }
+
+    .box_description{
+      padding: 0px 50px;
+      width: 70%;
+      a{
+        text-decoration: none;
+        color: #000000;
+      }
+      .name{
+        color: $amethyst;
+        font-size: 32px;
+        padding-bottom: 20px;
+      }
+      .list_massnger{
+        padding-top: 60px;
+        .massengers {
+          padding-bottom: 10px;
+        }
+        .name_massenger{
+          color: $amethyst;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+/* box_narrow */
+.about_me .box_narrow{
+  display: none;
+}
+
+@media screen and (max-width: 1220px){
+  /* box_wide box_photo */
+  .about_me .box_wide{
+    .box_photo{
+      width: 50%;
+    }
+
+    .box_description{
+      width: 50%;
+      .description{
+        // text-align: justify;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 1140px){
+  .about_me .box_wide{
+
+    //box_photo
+    .box_photo{
+      .name{
+        display: block;
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    }
+
+    // box_description
+    .box_description{
+      .name{
+        display: none;
+      }
+      .description{
+        padding-top: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1090px){
+  /* box_wide */
+  .about_me{
+    .box_wide .box_description .list_massnger{
+      display: none;
+    }
+
+    .box_narrow{
+      display: block;
+      padding-bottom: 50px;
+
+      .description{
+        display: none;
+      }
+
+      .list_massnger{
+        display: block;
+        padding: 0px 50px;
+        .massengers {
+          padding-bottom: 10px;
+          .name_massenger{
+            color: $amethyst;
+          }
+          a{
+            text-decoration: none;
+            color: #000000;
+          }
+        }
+      }
+
+    }
+  } 
+
+}
+
+@media screen and (max-width: 965px){
+  .about_me .box_wide .box_description{
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 870px){
+  /* box_wide */
+  .about_me{
+    // box_wide
+    .box_wide{
+      .box_photo{
+        padding-left: 20px;
+      }
+      box_description{
+        padding-right: 20px;
+      }
+    }
+
+    // box_narrow
+    .box_narrow{
+      .list_massnger{
+        padding: 0px 20px;
+      }
+    } 
+  }
+}
+
+@media screen and (max-width: 770px){
+  .about_me .title {
+    display: none;
+  }
+  /* box_wide */
+  .about_me .box_wide{
+    justify-content: center;
+    padding-bottom: 30px;
+  }
+  .about_me .box_wide .box_photo{
+    padding: 0px 0px;
+  }
+  .about_me .box_wide .box_description {
+    display: none;
+  }
+  /* box_description */
+  .about_me .box_narrow .description{
+    display: block;
+    text-align: justify;
+    padding: 0px 40px 40px 40px;
+  }
+  .about_me .box_narrow .description a{
+    text-decoration: none;
+    color: #000000;
+  }
+  .about_me .box_narrow .list_massnger{
+    padding: 0px 40px;
+  }
+}
+
+@media screen and (max-width: 620px){
+  .about_me .box_narrow {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .about_me .box_wide .box_photo{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .about_me .box_narrow {
+    font-size: 20px;
+  }
+  .about_me .box_narrow .description{
+    padding-bottom: 20px;
+  }
+  .about_me .box_narrow .list_massnger .massengers{
+    padding-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 430px){
+  .about_me .box_narrow .description{
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about_me .box_narrow .list_massnger{
+    padding: 0px 20px;
+  }
+}
+
+/*--------------------*/
+/*      My Works      */
+/*--------------------*/
+.my_works{
+  background-color: $bg_second;
+  display: flex;
+  justify-content: center;
+}
+.my_works .description{
+  display: flex;
+  align-items: center; /* Центрирование по вертикали */
+  flex-direction: column;
+
+  font-size: 26px;
+  text-align: justify;
+  width: 70%;
+  /* padding: 30px 50px; */
+  padding: 50px 120px;
+}
+.my_works .videos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .arrow{
+    font-size: 40px;
+    padding: 0px 30px;
+    color: $pale_lilac;
+    background: none; /* Убирает фоновый цвет */
+    border: none; /* Убирает рамку */
+  }
+
+  .video{
+    margin: 30px 0px;
+    width: 40%;
+    border: 5px solid $pale_lilac;
+  }
+  .video_1{
+    display: block;
+  }
+  .video_2{
+    display: none;
+  }
+  .video_3{
+    display: none;
+  }
+  .video_4{
+    display: none;
+  }
+}
+
+/* появление - emergence  */
+@keyframes emergence_left{
+  0%{
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes emergence_right{
+  0%{
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1620px){
+  .my_works .description .timing {
+    display: none;
+  }
+}
+@media screen and (max-width: 1420px){
+  .my_works .description .timing {
+    display: none;
+  }
+  .my_works .description{
+    padding: 30px 50px;
+  }
+}
+@media screen and (max-width: 1280px){
+  .my_works .videos .video{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1030px){
+  .my_works .description{
+    padding-right: 0;
+  }
+  .my_works .videos .video{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 940px){
+  .my_works .description{
+    font-size: 22px;
+  }
+  .my_works .videos .video{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 850px){
+  .my_works{
+    flex-direction: column-reverse;
+  }
+  .my_works .videos .video{
+    width: 30%;
+  }
+  .my_works .description{
+    width: 100%;
+    padding: 0px 50px 20px 50px;
+  }
+}
+@media screen and (max-width: 650px){
+  .my_works .videos .video{
+    width: 60%;
+  }
+}
+@media screen and (max-width: 485px){
+  .my_works .videos .left_arrow{
+    padding-left: 0px;
+  }
+  .my_works .videos .right_arrow{
+    padding-right: 0px;
+  }
+}
+@media screen and (max-width: 430px){
+  .my_works .description{
+    font-size: 20px;
+    padding: 0px 20px 20px 20px;
+  }
+}
+@media screen and (max-width: 360px){
+  .my_works .description{
+    font-size: 16px;
+  }
+  .my_works .videos .left_arrow{
+    padding-left: 0;
+  }
+  .my_works .videos .right_arrow{
+    padding-right: 0;
+  }
+}
+
+/*--------------------*/
+/*  Procedure Photos  */
+/*--------------------*/
+.procedure_photos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: $bg_first;
+
+  .title{
+    color: $pale_lilac;
+    order: -1;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    margin: 20px 0px;
+  }
+  .photo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 20%;
+    border: 2px solid $pale_lilac;
+    margin: 50px 0px;
+    object-fit: contain;  /* изображение будет масштабироваться, сохраняя свои пропорции */
+  }
+  .photo_scroll{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  .procedure_photos{
+    .photo{
+      width: 25%;
+      margin-top: 30px;
+    }
+    .photo_4{
+      display: none;
+    }
+  } 
+}
+
+@media screen and (max-width: 1000px){
+  .procedure_photos {
+    .title{
+      margin-bottom: 40px;
+    }
+    .photo{
+      width: 35%;
+      margin-top: 0;
+    }
+    .photo_4{
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 650px){
+  .procedure_photos{
+    .title{
+      margin-bottom: 0;
+    }
+    .photo{
+      display: none;
+    }
+    .photo_scroll{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      height: 520px;
+      .arrow{
+        font-size: 40px;
+        color: $pale_lilac;
+        padding: 0px 10px;
+        background: none;
+        border: none;
+      }
+    }
+
+  }
+   
+  .my_works .videos .arrow{
+    font-size: 40px;
+    padding: 0px 10px;
+  }
+
+  .procedure_photos {
+    .photo_scroll{
+        .photo{
+          display: flex;
+          justify-content: center;  /* Главная */
+          align-items: center;      /* Поперечная */
+          margin: 20px 0px;
+          width: 60%;
+          border: 2px solid $pale_lilac;
+          object-fit: contain;
+      }
+      .photo_1{
+        display: flex;
+      }
+      .photo_2{
+        display: none;
+      }
+      .photo_3{
+        display: none;
+      }
+      .photo_4{
+        display: none;
+      }
+    } 
+  }
+}
+
+@media screen and (max-width: 560px){
+  .procedure_photos .photo_scroll .photo{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 484px){
+  .procedure_photos .photo_scroll{
+    height: 430px;
+  }
+}
+
+@media screen and (max-width: 430px){
+  .procedure_photos .photo_scroll{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 360px){
+  .procedure_photos .photo_scroll{
+    height: 370px;
+  }
+}
+
+/*--------------*/
+/*  Google Map  */
+/*--------------*/
+.google_map{
+  background-color: $bg_second;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .title{
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    color: #F5F5DC;
+    padding: 20px 0px;
+  }
+  .map{
+    background-color: #F5F5DC;
+    border: 5px solid #F5F5DC;
+    margin: 30px 0px 50px 0px;
+  }
+}
+
+
+
+/*------------------*/
+/*      footer      */
+/*------------------*/
+footer {
+  background-color: $bg_second;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+
+.footer_box{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 50px 0;
+  a{
+    color: #000000;
+    text-decoration: none;
+  }
+}
+.chief_items{
+  color: $amethyst;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.items_footer{
+  font-size: 20px;
+  padding: 2px 0;
+}
+.footer_box_google_map{
+  padding-top: 10px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.chief_map{
+  display: none;
+}
+
+@media screen and (max-width: 880px){
+  footer{
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .footer_box{
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .footer_box_1{
+      display: none;
+    }
+
+    .chief_map{
+      color: $amethyst;
+      font-size: 30px;
+      display: flex;
+      margin: 10px;
+    }
+
+  }
+}
+
+/*----------*/
+/*    map   */
+/*----------*/
+.footer_box_google_map iframe{
+  width: 100%; 
+  height: 210px;
+  border: none;
+  margin: 10px;
+  @media screen and (max-width: 900px){
+    // width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+  body {
+    font-weight: 550;
+  }
+}
+
+/*--------------------------------*/
+/*    window "Make Appointment"   */
+/*--------------------------------*/
+.window_make_appointment{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.sub_window_make_appointment{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  background-color: $bg_first;
+  margin: 50px;
+  @media screen and (max-width: 1180px){
+    font-size: 25px;
+  }
+  @media screen and (max-width: 500px){
+    font-size: 16px;
+    margin: 20px;
+  }
+
+  .text{
+    margin: 20px;
+  }
+  .buttons{
+    text-align: right;
+    margin: 0px 20px;
+    .select{
+      margin: 20px 0px;
+    }
+  }
+}
+>>>>>>> d978c33 (commit.Linux (add ficha 'cope name procedur'))
