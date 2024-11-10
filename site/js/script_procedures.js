@@ -16,7 +16,7 @@ var arr_height = new Array(all_num_description);
 }
 
 window.addEventListener('load', ()=>{
-    // list_with_height();
+    list_with_height();
 });
 
 button_read_more.map((button, index_button)=>{

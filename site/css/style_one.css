@@ -956,6 +956,18 @@ a {
   justify-content: center;
   align-items: end;
   background-color: #f9f9ff;
+  margin: 50px;
+}
+@media screen and (max-width: 1180px) {
+  .sub_window_make_appointment {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .sub_window_make_appointment {
+    font-size: 16px;
+    margin: 20px;
+  }
 }
 .sub_window_make_appointment .text {
   margin: 20px;
@@ -965,6 +977,10 @@ a {
   margin: 0px 20px;
 }
 .sub_window_make_appointment .buttons .select {
+<<<<<<< HEAD
   margin: 20px;
 >>>>>>> ad7aab0 (add (buy_procedure_ru.html))
+=======
+  margin: 20px 0px;
+>>>>>>> c625be6 (I corrected the errors and adjusted the dimensions, but it's the same (add ficha 'cope name procedur'))
 }

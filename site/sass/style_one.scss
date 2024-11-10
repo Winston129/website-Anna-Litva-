@@ -1036,6 +1036,14 @@ a {
   justify-content: center;
   align-items: end;
   background-color: $bg_first;
+  margin: 50px;
+  @media screen and (max-width: 1180px){
+    font-size: 25px;
+  }
+  @media screen and (max-width: 500px){
+    font-size: 16px;
+    margin: 20px;
+  }
 
   .text{
     margin: 20px;
@@ -1044,8 +1052,12 @@ a {
     text-align: right;
     margin: 0px 20px;
     .select{
-      margin: 20px;
+      margin: 20px 0px;
     }
   }
+<<<<<<< HEAD
 >>>>>>> ad7aab0 (add (buy_procedure_ru.html))
 }
+=======
+}
+>>>>>>> c625be6 (I corrected the errors and adjusted the dimensions, but it's the same (add ficha 'cope name procedur'))
