@@ -48,6 +48,9 @@ img {
 body {
   font-family: "Raleway", sans-serif;
   background-color: $bg_first;
+  @media screen and (max-width: 500px){
+      font-weight: 550;
+  }
 }
 
 header{
@@ -295,9 +298,87 @@ main{
   }
 }
 
+footer{
+  background-color: $pale_lilac;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  .title{
+    font-size: 30px;
+    margin: 20px 0px;
+    @media screen and (max-width: 800px){
+      font-size: 25px;
+    }
+    @media screen and (max-width: 415px){
+      font-size: 20px;
+    }
+  }
+  .footer_box{
+    font-size: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    @media screen and (max-width: 800px){
+      width: 300px;
+    }
+    a{
+      text-decoration: none;
+      
+      svg {
+        width: 48px;
+        height: 48px;
+        fill: currentColor;  
+        @media screen and (max-width: 800px){
+          width: 42px;
+          height: 42px;
+        }
+        @media screen and (max-width: 415px){
+          width: 38px;
+          height: 38px;
+        }
+      }
 
-@media screen and (max-width: 500px){
-  body {
-    font-weight: 550;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &.instagram {
+        color: $amethyst;
+        circle{
+          stroke: $amethyst;
+        }
+
+        &:hover {
+          color: #E1306C;
+          circle{
+            stroke: #E1306C; 
+          }
+        }
+      }
+
+      &.facebook {
+        color: $amethyst;
+        &:hover {
+          color: #1877F2; 
+        }
+      }
+
+      &.map {
+        color: $amethyst;
+        &:hover {
+          color: #FF5252; 
+        }
+      }
+
+      &.developer {
+        color: $amethyst;
+        &:hover {
+          color: #555555; 
+        }
+      }
+    }
+
   }
 }

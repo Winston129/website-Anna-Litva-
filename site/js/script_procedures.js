@@ -4,7 +4,7 @@ var button_sign_up = Array.from(document.querySelectorAll(".box_procedure .box_b
 var name_procedure_arr = Array.from(document.querySelectorAll(".box_procedure .procedure .name_procedure"));
 var button_close =  Array.from(document.querySelectorAll(".box_procedure .button_close"));
 var box_description = Array.from(document.querySelectorAll(".box_procedure .box_description"));
-var all_num_description = 11;
+var all_num_description = 13;
 var arr_height = new Array(all_num_description);
 }
 

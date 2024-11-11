@@ -52,6 +52,11 @@ body {
   font-family: "Raleway", sans-serif;
   background-color: #f9f9ff;
 }
+@media screen and (max-width: 500px) {
+  body {
+    font-weight: 550;
+  }
+}
 
 header {
   display: flex;
@@ -298,8 +303,89 @@ main {
     font-size: 20px;
   }
 }
-@media screen and (max-width: 500px) {
-  body {
-    font-weight: 550;
+footer {
+  background-color: #D29CFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+footer .title {
+  font-size: 30px;
+  margin: 20px 0px;
+}
+@media screen and (max-width: 800px) {
+  footer .title {
+    font-size: 25px;
   }
+}
+@media screen and (max-width: 415px) {
+  footer .title {
+    font-size: 20px;
+  }
+}
+footer .footer_box {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+@media screen and (max-width: 800px) {
+  footer .footer_box {
+    width: 300px;
+  }
+}
+footer .footer_box a {
+  text-decoration: none;
+}
+footer .footer_box a svg {
+  width: 48px;
+  height: 48px;
+  fill: currentColor;
+}
+@media screen and (max-width: 800px) {
+  footer .footer_box a svg {
+    width: 42px;
+    height: 42px;
+  }
+}
+@media screen and (max-width: 415px) {
+  footer .footer_box a svg {
+    width: 38px;
+    height: 38px;
+  }
+}
+footer .footer_box a:hover {
+  transform: scale(1.1);
+}
+footer .footer_box a.instagram {
+  color: #9966cc;
+}
+footer .footer_box a.instagram circle {
+  stroke: #9966cc;
+}
+footer .footer_box a.instagram:hover {
+  color: #E1306C;
+}
+footer .footer_box a.instagram:hover circle {
+  stroke: #E1306C;
+}
+footer .footer_box a.facebook {
+  color: #9966cc;
+}
+footer .footer_box a.facebook:hover {
+  color: #1877F2;
+}
+footer .footer_box a.map {
+  color: #9966cc;
+}
+footer .footer_box a.map:hover {
+  color: #FF5252;
+}
+footer .footer_box a.developer {
+  color: #9966cc;
+}
+footer .footer_box a.developer:hover {
+  color: #555555;
 }
