@@ -174,12 +174,29 @@ function window_make_appointment(){
     });
 }
 
+//==============================
+//    loade height for video    
+//==============================
+function loade_height_video(){
+    const videos = document.querySelectorAll(".video");
 
+    videos.forEach((video, i) => {
+        video.addEventListener("loadedmetadata", () => {
+            const { width, height } = video.getBoundingClientRect();
+    
+            if (videos[i + 1]) {
+                videos[i + 1].style.width = `${width}px`;
+                videos[i + 1].style.height = `${height}px`;
+            }
+        });
+    });
+}
 
 func_sidebar();
 Arrows();
 func_open_photo();
-window_make_appointment()
+window_make_appointment();
+// loade_height_video();
 
 /*
 ========================
