@@ -94,6 +94,10 @@ header {
 .head_description {
   font-size: 22px;
   text-align: justify;
+  sup{
+    font-size: 0.7em;
+    vertical-align: super;
+  }
 }
 .button_head {
   padding: 3% 0% 3% 10%;
@@ -607,67 +611,122 @@ header {
   }
 }
 
-/*--------------------*/
-/*      My Works      */
-/*--------------------*/
-.my_works{
+
+/*-------------------------------*/
+/*-- Visualisation of Diplomas --*/
+/*-------------------------------*/
+.block_diploms_photo{
   background-color: $bg_second;
   display: flex;
-  justify-content: center;
-}
-.my_works .description{
-  display: flex;
-  align-items: center; /* Центрирование по вертикали */
-  flex-direction: column;
-
-  font-size: 26px;
-  text-align: justify;
-  width: 70%;
-  /* padding: 30px 50px; */
-  padding: 50px 120px;
-}
-.my_works .videos{
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  .arrow{
-    font-size: 40px;
-    padding: 0px 30px;
-    color: $pale_lilac;
-    background: none; /* Убирает фоновый цвет */
-    border: none; /* Убирает рамку */
+  .description{
+    font-size: 26px;
+    text-align: justify;
+    width: 70%;
+    padding: 50px 120px;
+    @media screen and (max-width: 1620px){
+      .timing{
+        display: none;
+      }
+    }
+    @media screen and (max-width: 1420px){
+      padding: 30px 50px;
+    }
+    @media screen and (max-width: 620px){
+      font-size: 22px;
+    }
   }
 
-  .video{
-    margin: 30px 0px;
-    width: 40%;
-    border: 5px solid $pale_lilac;
-    min-height: 400px;
-    min-width: 219px;
+  .photos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .arrow{
+      font-size: 40px;
+      padding: 0px 30px;
+      color: $pale_lilac;
+      background: none;
+      border: none;
+    }
+    .photo {
+      margin: 30px 0px;
+      width: 40%;
+      border: 3px solid $pale_lilac;
+      @media screen and (max-width: 1520px){
+        width: 50%;
+      }
+    }
+    .photo_1{
+      display: flex;
+    }
+    .photo_2{
+      display: none;
+    }
   }
-  .video_1{
-    display: block;
+
+
+  @media screen and (max-width: 1140px){
+    .description{
+      padding-right: 0px;
+    }
+    .photos{
+      width: 50%;
+    }
   }
-  .video_2{
-    display: none;
+  @media screen and (max-width: 1120px){
+    .description{
+      width: 60%;
+    }
+    .photos{
+      width: 40%;
+      .arrow{
+        padding: 0px 10px;
+      }
+    }
   }
-  .video_3{
-    display: none;
+  @media screen and (max-width: 930px){
+    flex-direction: column-reverse;
+    .description{
+      width: 100%;
+      padding: 10px 50px 50px 50px;
+    }
+    .photos {
+      .photo{
+        width: 100%;
+      }
+    }
   }
-  .video_4{
-    display: none;
+
+
+  @media screen and (max-width: 810px){
+    .photos{
+      width: 50%;
+    }
   }
-  .video_5{
-    display: none;
+  @media screen and (max-width: 720px){
+    .photos{
+      width: 60%;
+    }
   }
-  .video_6{
-    display: none;
+  @media screen and (max-width: 550px){
+    .photos{
+      width: 100%;
+      padding: 20px;
+    }
   }
-  .video_7{
-    display: none;
+
+  
+  @media screen and (max-width: 430px){
+    .description{
+      padding: 20px;
+    }
   }
+
 }
+
+
 
 /* появление - emergence  */
 @keyframes emergence_left{
@@ -688,83 +747,6 @@ header {
   100%{
     transform: translateX(0px);
     opacity: 1;
-  }
-}
-
-@media screen and (max-width: 1620px){
-  .my_works .description .timing {
-    display: none;
-  }
-}
-@media screen and (max-width: 1420px){
-  .my_works .description .timing {
-    display: none;
-  }
-  .my_works .description{
-    padding: 30px 50px;
-  }
-}
-@media screen and (max-width: 1280px){
-  .my_works .videos .video{
-    width: 50%;
-  }
-}
-@media screen and (max-width: 1030px){
-  .my_works .description{
-    padding-right: 0;
-  }
-  .my_works .videos .video{
-    width: 60%;
-  }
-}
-@media screen and (max-width: 940px){
-  .my_works .description{
-    font-size: 22px;
-  }
-  .my_works .videos .video{
-    width: 50%;
-  }
-}
-@media screen and (max-width: 850px){
-  .my_works{
-    flex-direction: column-reverse;
-  }
-  .my_works .videos .video{
-    width: 30%;
-  }
-  .my_works .description{
-    width: 100%;
-    padding: 0px 50px 20px 50px;
-  }
-}
-@media screen and (max-width: 650px){
-  .my_works .videos .video{
-    width: 60%;
-  }
-}
-@media screen and (max-width: 485px){
-  .my_works .videos .left_arrow{
-    padding-left: 0px;
-  }
-  .my_works .videos .right_arrow{
-    padding-right: 0px;
-  }
-}
-@media screen and (max-width: 430px){
-  .my_works .description{
-    font-size: 20px;
-    padding: 0px 20px 20px 20px;
-  }
-}
-@media screen and (max-width: 360px){
-  .my_works .description{
-    font-size: 16px;
-  }
-  .my_works .videos .left_arrow{
-    padding-left: 0;
-  }
-  .my_works .videos .right_arrow{
-    padding-right: 0;
   }
 }
 

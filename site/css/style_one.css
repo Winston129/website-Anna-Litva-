@@ -109,6 +109,10 @@ header {
   font-size: 22px;
   text-align: justify;
 }
+.head_description sup {
+  font-size: 0.7em;
+  vertical-align: super;
+}
 
 .button_head {
   padding: 3% 0% 3% 10%;
@@ -563,65 +567,115 @@ header {
     padding: 0px 20px;
   }
 }
-/*--------------------*/
-/*      My Works      */
-/*--------------------*/
-.my_works {
+/*-------------------------------*/
+/*-- Visualisation of Diplomas --*/
+/*-------------------------------*/
+.block_diploms_photo {
   background-color: #e9e9f3;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.my_works .description {
-  display: flex;
-  align-items: center; /* Центрирование по вертикали */
-  flex-direction: column;
+.block_diploms_photo .description {
   font-size: 26px;
   text-align: justify;
   width: 70%;
-  /* padding: 30px 50px; */
   padding: 50px 120px;
 }
-
-.my_works .videos {
+@media screen and (max-width: 1620px) {
+  .block_diploms_photo .description .timing {
+    display: none;
+  }
+}
+@media screen and (max-width: 1420px) {
+  .block_diploms_photo .description {
+    padding: 30px 50px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .block_diploms_photo .description {
+    font-size: 22px;
+  }
+}
+.block_diploms_photo .photos {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.my_works .videos .arrow {
+.block_diploms_photo .photos .arrow {
   font-size: 40px;
   padding: 0px 30px;
   color: #D29CFF;
-  background: none; /* Убирает фоновый цвет */
-  border: none; /* Убирает рамку */
+  background: none;
+  border: none;
 }
-.my_works .videos .video {
+.block_diploms_photo .photos .photo {
   margin: 30px 0px;
   width: 40%;
-  border: 5px solid #D29CFF;
-  min-height: 400px;
-  min-width: 219px;
+  border: 3px solid #D29CFF;
 }
-.my_works .videos .video_1 {
-  display: block;
+@media screen and (max-width: 1520px) {
+  .block_diploms_photo .photos .photo {
+    width: 50%;
+  }
 }
-.my_works .videos .video_2 {
+.block_diploms_photo .photos .photo_1 {
+  display: flex;
+}
+.block_diploms_photo .photos .photo_2 {
   display: none;
 }
-.my_works .videos .video_3 {
-  display: none;
+@media screen and (max-width: 1140px) {
+  .block_diploms_photo .description {
+    padding-right: 0px;
+  }
+  .block_diploms_photo .photos {
+    width: 50%;
+  }
 }
-.my_works .videos .video_4 {
-  display: none;
+@media screen and (max-width: 1120px) {
+  .block_diploms_photo .description {
+    width: 60%;
+  }
+  .block_diploms_photo .photos {
+    width: 40%;
+  }
+  .block_diploms_photo .photos .arrow {
+    padding: 0px 10px;
+  }
 }
-.my_works .videos .video_5 {
-  display: none;
+@media screen and (max-width: 930px) {
+  .block_diploms_photo {
+    flex-direction: column-reverse;
+  }
+  .block_diploms_photo .description {
+    width: 100%;
+    padding: 10px 50px 50px 50px;
+  }
+  .block_diploms_photo .photos .photo {
+    width: 100%;
+  }
 }
-.my_works .videos .video_6 {
-  display: none;
+@media screen and (max-width: 810px) {
+  .block_diploms_photo .photos {
+    width: 50%;
+  }
 }
-.my_works .videos .video_7 {
-  display: none;
+@media screen and (max-width: 720px) {
+  .block_diploms_photo .photos {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .block_diploms_photo .photos {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .block_diploms_photo .description {
+    padding: 20px;
+  }
 }
 
 /* появление - emergence  */
@@ -643,82 +697,6 @@ header {
   100% {
     transform: translateX(0px);
     opacity: 1;
-  }
-}
-@media screen and (max-width: 1620px) {
-  .my_works .description .timing {
-    display: none;
-  }
-}
-@media screen and (max-width: 1420px) {
-  .my_works .description .timing {
-    display: none;
-  }
-  .my_works .description {
-    padding: 30px 50px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .my_works .videos .video {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 1030px) {
-  .my_works .description {
-    padding-right: 0;
-  }
-  .my_works .videos .video {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 940px) {
-  .my_works .description {
-    font-size: 22px;
-  }
-  .my_works .videos .video {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 850px) {
-  .my_works {
-    flex-direction: column-reverse;
-  }
-  .my_works .videos .video {
-    width: 30%;
-  }
-  .my_works .description {
-    width: 100%;
-    padding: 0px 50px 20px 50px;
-  }
-}
-@media screen and (max-width: 650px) {
-  .my_works .videos .video {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 485px) {
-  .my_works .videos .left_arrow {
-    padding-left: 0px;
-  }
-  .my_works .videos .right_arrow {
-    padding-right: 0px;
-  }
-}
-@media screen and (max-width: 430px) {
-  .my_works .description {
-    font-size: 20px;
-    padding: 0px 20px 20px 20px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .my_works .description {
-    font-size: 16px;
-  }
-  .my_works .videos .left_arrow {
-    padding-left: 0;
-  }
-  .my_works .videos .right_arrow {
-    padding-right: 0;
   }
 }
 /*--------------------*/

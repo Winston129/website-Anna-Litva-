@@ -69,6 +69,10 @@ header{
 .name_web{
   align-self: center;
   margin: 0px 30px;
+  sup{
+    font-size: 0.6em;
+    vertical-align: super;
+  }
 }
 header .special_offer{
   margin-left: auto;
