@@ -260,10 +260,10 @@ header {
   }
   .button_head {
     padding: 3% 5%;
-    display: flex; /* Размещаем div один под другим */
-    justify-content: center; /* Центрируем по горизонтали внутри контейнера */
-    align-items: end; /* Выравниваем по правому краю */
-    flex-direction: column; /* Размещаем div один под другим */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
     /* margin-right: 5%; */
   }
   .button_head .right_button {
@@ -574,107 +574,125 @@ header {
   background-color: #e9e9f3;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .block_diploms_photo .description {
   font-size: 26px;
   text-align: justify;
-  width: 70%;
-  padding: 50px 120px;
-}
-@media screen and (max-width: 1620px) {
-  .block_diploms_photo .description .timing {
-    display: none;
-  }
-}
-@media screen and (max-width: 1420px) {
-  .block_diploms_photo .description {
-    padding: 30px 50px;
-  }
-}
-@media screen and (max-width: 620px) {
-  .block_diploms_photo .description {
-    font-size: 22px;
-  }
+  width: 60%;
+  margin: 50px;
 }
 .block_diploms_photo .photos {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.block_diploms_photo .photos .arrow {
-  font-size: 40px;
-  padding: 0px 30px;
-  color: #D29CFF;
-  background: none;
-  border: none;
-}
-.block_diploms_photo .photos .photo {
-  margin: 30px 0px;
   width: 40%;
-  border: 3px solid #D29CFF;
 }
-@media screen and (max-width: 1520px) {
-  .block_diploms_photo .photos .photo {
-    width: 50%;
-  }
+.block_diploms_photo .photos .photo_for_height {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px;
 }
-.block_diploms_photo .photos .photo_1 {
+.block_diploms_photo .photos .photo_for_height .photo {
+  border: 2px solid #9966cc;
+  width: 40%;
+  max-height: 100%;
+}
+.block_diploms_photo .photos .photo_for_height .photo_1 {
   display: flex;
 }
-.block_diploms_photo .photos .photo_2 {
+.block_diploms_photo .photos .photo_for_height .photo_2 {
   display: none;
 }
-@media screen and (max-width: 1140px) {
+.block_diploms_photo .photos .photo_for_height .arrow {
+  background-color: none;
+  color: #9966cc;
+  font-size: 30px;
+  margin: 0px 10px;
+  border: none;
+}
+@media screen and (max-width: 1530px) {
   .block_diploms_photo .description {
-    padding-right: 0px;
+    width: 70%;
   }
   .block_diploms_photo .photos {
-    width: 50%;
+    width: 30%;
+  }
+  .block_diploms_photo .photos .photo_for_height .photo {
+    width: 100%;
   }
 }
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1270px) {
   .block_diploms_photo .description {
     width: 60%;
   }
   .block_diploms_photo .photos {
     width: 40%;
   }
-  .block_diploms_photo .photos .arrow {
-    padding: 0px 10px;
+  .block_diploms_photo .photos .photo_for_height .photo {
+    width: 100%;
   }
 }
-@media screen and (max-width: 930px) {
-  .block_diploms_photo {
-    flex-direction: column-reverse;
+@media screen and (max-width: 1160px) {
+  .block_diploms_photo .description .timing {
+    display: none;
   }
+}
+@media screen and (max-width: 1000px) {
   .block_diploms_photo .description {
-    width: 100%;
-    padding: 10px 50px 50px 50px;
+    width: 50%;
   }
-  .block_diploms_photo .photos .photo {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 810px) {
   .block_diploms_photo .photos {
     width: 50%;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 890px) {
+  .block_diploms_photo {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .block_diploms_photo .description {
+    width: calc(100% - 100px);
+    margin: 0px 0px 20px 0px;
+  }
+  .block_diploms_photo .photos {
+    width: 45%;
+    margin: 30px 0px;
+  }
+  .block_diploms_photo .photos .photo_for_height {
+    margin: 0px;
+  }
+  .block_diploms_photo .photos .photo_for_height .photo {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 630px) {
   .block_diploms_photo .photos {
     width: 60%;
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 630px) {
+  .block_diploms_photo .description {
+    font-size: 22px;
+    width: calc(100% - 40px);
+  }
+  .block_diploms_photo .description .timing {
+    display: flex;
+  }
   .block_diploms_photo .photos {
-    width: 100%;
-    padding: 20px;
+    width: 80%;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
   .block_diploms_photo .description {
-    padding: 20px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .block_diploms_photo .photos {
+    width: 90%;
   }
 }
 

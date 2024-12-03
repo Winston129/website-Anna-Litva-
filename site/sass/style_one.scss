@@ -254,10 +254,10 @@ header {
 
   .button_head {
     padding: 3% 5%;
-    display: flex; /* Размещаем div один под другим */
-    justify-content: center; /* Центрируем по горизонтали внутри контейнера */
-    align-items: end; /* Выравниваем по правому краю */
-    flex-direction: column; /* Размещаем div один под другим */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: column;
     /* margin-right: 5%; */
   }
   .button_head .right_button {
@@ -619,112 +619,252 @@ header {
   background-color: $bg_second;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 
   .description{
     font-size: 26px;
     text-align: justify;
-    width: 70%;
-    padding: 50px 120px;
-    @media screen and (max-width: 1620px){
-      .timing{
-        display: none;
-      }
-    }
-    @media screen and (max-width: 1420px){
-      padding: 30px 50px;
-    }
-    @media screen and (max-width: 620px){
-      font-size: 22px;
-    }
+    width: 60%;
+    margin: 50px;
   }
-
+  
   .photos{
     display: flex;
     justify-content: center;
     align-items: center;
-    .arrow{
-      font-size: 40px;
-      padding: 0px 30px;
-      color: $pale_lilac;
-      background: none;
-      border: none;
-    }
-    .photo {
-      margin: 30px 0px;
-      width: 40%;
-      border: 3px solid $pale_lilac;
-      @media screen and (max-width: 1520px){
-        width: 50%;
-      }
-    }
-    .photo_1{
+    width: 40%;
+    .photo_for_height{
       display: flex;
-    }
-    .photo_2{
-      display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 50px;
+      .photo{
+        border: 2px solid $amethyst;
+        width: 40%;
+        max-height: 100%;
+      }
+      .photo_1{
+        display: flex;
+      }
+      .photo_2{
+        display: none;
+      }
+      .arrow{
+        background-color: none;
+        color: $amethyst;
+        font-size: 30px;
+        margin: 0px 10px;
+        border: none;
+      }
     }
   }
 
 
-  @media screen and (max-width: 1140px){
+  @media screen and (max-width: 1530px){
     .description{
-      padding-right: 0px;
+      width: 70%;
     }
     .photos{
-      width: 50%;
+      width: 30%;
+      .photo_for_height{
+        .photo{
+          width: 100%;
+        }
+      }
     }
   }
-  @media screen and (max-width: 1120px){
+  
+  @media screen and (max-width: 1270px){
     .description{
       width: 60%;
     }
     .photos{
       width: 40%;
-      .arrow{
-        padding: 0px 10px;
+      .photo_for_height{
+        .photo{
+          width: 100%;
+        }
       }
     }
   }
-  @media screen and (max-width: 930px){
-    flex-direction: column-reverse;
+
+  @media screen and (max-width: 1160px){
     .description{
-      width: 100%;
-      padding: 10px 50px 50px 50px;
-    }
-    .photos {
-      .photo{
-        width: 100%;
+      .timing{
+        display: none;
       }
     }
   }
-
-
-  @media screen and (max-width: 810px){
+    
+  @media screen and (max-width: 1000px){
+    .description{
+      width: 50%;
+    }
     .photos{
       width: 50%;
     }
   }
-  @media screen and (max-width: 720px){
+  
+  @media screen and (max-width: 890px){
+    flex-direction: column-reverse;
+    align-items: center;
+    .description{
+      width: calc(100% - 100px);
+      margin: 0px 0px 20px 0px;
+    }
+    .photos{
+      width: 45%;
+      margin: 30px 0px;
+      .photo_for_height{
+        margin: 0px;
+        .photo{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 630px){
     .photos{
       width: 60%;
     }
   }
-  @media screen and (max-width: 550px){
+  @media screen and (max-width: 630px){
+    .description{
+      font-size: 22px;
+      width: calc(100% - 40px);
+      .timing{
+        display: flex;
+      }
+    }
     .photos{
-      width: 100%;
-      padding: 20px;
+      width: 80%;
     }
   }
+  @media screen and (max-width: 500px){
+    .description{
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-width: 420px){
+    .photos{
+      width: 90%;
+    }
+  }
+}
+
+// .block_diploms_photo{
+//   background-color: $bg_second;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   .description{
+//     font-size: 26px;
+//     text-align: justify;
+//     width: 70%;
+//     padding: 50px 120px;
+//     @media screen and (max-width: 1620px){
+//       .timing{
+//         display: none;
+//       }
+//     }
+//     @media screen and (max-width: 1420px){
+//       padding: 30px 50px;
+//     }
+//     @media screen and (max-width: 620px){
+//       font-size: 22px;
+//     }
+//   }
+
+//   .photos{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     .arrow{
+//       font-size: 40px;
+//       padding: 0px 30px;
+//       color: $pale_lilac;
+//       background: none;
+//       border: none;
+//     }
+//     .photo {
+//       margin: 30px 0px;
+//       width: 40%;
+//       border: 3px solid $pale_lilac;
+//       @media screen and (max-width: 1520px){
+//         width: 50%;
+//       }
+//     }
+//     .photo_1{
+//       display: flex;
+//     }
+//     .photo_2{
+//       display: none;
+//     }
+//   }
+
+
+//   @media screen and (max-width: 1140px){
+//     .description{
+//       padding-right: 0px;
+//     }
+//     .photos{
+//       width: 50%;
+//     }
+//   }
+//   @media screen and (max-width: 1120px){
+//     .description{
+//       width: 60%;
+//     }
+//     .photos{
+//       width: 40%;
+//       .arrow{
+//         padding: 0px 10px;
+//       }
+//     }
+//   }
+//   @media screen and (max-width: 930px){
+//     flex-direction: column-reverse;
+//     .description{
+//       width: 100%;
+//       padding: 10px 50px 50px 50px;
+//     }
+//     .photos {
+//       .photo{
+//         width: 100%;
+//       }
+//     }
+//   }
+
+
+//   @media screen and (max-width: 810px){
+//     .photos{
+//       width: 50%;
+//     }
+//   }
+//   @media screen and (max-width: 720px){
+//     .photos{
+//       width: 60%;
+//     }
+//   }
+//   @media screen and (max-width: 550px){
+//     .photos{
+//       width: 100%;
+//       padding: 20px;
+//     }
+//   }
 
   
-  @media screen and (max-width: 430px){
-    .description{
-      padding: 20px;
-    }
-  }
+//   @media screen and (max-width: 430px){
+//     .description{
+//       padding: 20px;
+//     }
+//   }
 
-}
+// }
 
 
 

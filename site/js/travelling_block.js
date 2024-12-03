@@ -1,15 +1,23 @@
 console.log("он хоть подключен? ну хоть так");
 
-/*
-=================
-    Open menu    
-=================
-*/
+window.addEventListener('load', height_photo);
+window.addEventListener("resize", height_photo);
+function height_photo(){
+    let photo_1 = document.querySelector(".block_diploms_photo .photos .photo_for_height .photo_1");
+    let photo_2 = document.querySelector(".block_diploms_photo .photos .photo_for_height");
+    
+    let get_height = getComputedStyle(photo_1).height;
+    photo_2.style.height = get_height;
+}
+
+/*=================*/
+/*    Open menu    */
+/*=================*/
 // sidebar - боковая панель
 function func_sidebar(){
-    var button_open = document.querySelector(".open_menu");
-    var button_close = document.querySelector(".close_menu")
-    var open_window = document.querySelector(".window_menu");
+    let button_open = document.querySelector(".open_menu");
+    let button_close = document.querySelector(".close_menu")
+    let open_window = document.querySelector(".window_menu");
 
     button_open.addEventListener('click', () => {
         console.log("хера заработало");
@@ -23,11 +31,10 @@ function func_sidebar(){
     })
 }
 
-/*
-===================
-    SLide video    
-===================
-*/
+
+/*===================*/
+/*    SLide video    */
+/*===================*/
 function func_for_animation(list_video, i, left_or_right, block_or_flex){
     list_video[i].style.display = block_or_flex;
 
@@ -42,18 +49,18 @@ function func_for_animation(list_video, i, left_or_right, block_or_flex){
 
 function func_pause(list_video){
     for(let video of list_video){
-        video.pause();         // Останавливает воспроизведение видео
-        video.currentTime = 0; // Сбрасывает видео к началу
+        video.pause();
+        video.currentTime = 0;
     }
 }
 
 function func_scroll(lift_arrow, right_arrow, list_video, bool_video, block_or_flex){
     console.log(list_video);
 
-    var list_style_video = list_video.map(i => {return getComputedStyle(i)});
+    let list_style_video = list_video.map(i => {return getComputedStyle(i)});
 
-    var last_index = list_style_video.length;
-    var penultimate_index = last_index - 1;
+    let last_index = list_style_video.length;
+    let penultimate_index = last_index - 1;
 
     lift_arrow.addEventListener("click", () => {
         if(bool_video){
@@ -100,29 +107,31 @@ function func_scroll(lift_arrow, right_arrow, list_video, bool_video, block_or_f
     });
 }
 
-/*
-=========================
-    Full screen photo    
-=========================
-*/
+/*=========================*/
+/*    Full screen photo    */
+/*=========================*/
 function func_open_photo(){
-    var footer = document.querySelector("footer");
-    var arr_photo = Array.from(document.querySelectorAll("img"));
+    let footer = document.querySelector("footer");
+    let arr_photo = Array.from(document.querySelectorAll("img"));
 
-    var new_element_div = document.createElement("div");
-    var new_element_photo = document.createElement("img");
+    let new_element_div = document.createElement("div");
+    let new_element_photo = document.createElement("img");
+    let new_element_close = document.createElement("button");
 
     arr_photo.map(photo => {
         photo.addEventListener("click", () => {
-            let screenHeight = window.innerHeight;
-            screenHeight = Number(screenHeight) - 100;
+            let screen_height = window.innerHeight;
+            screen_height = Number(screen_height) - 100;
 
             new_element_div.appendChild(new_element_photo);
+            new_element_div.appendChild(new_element_close);
 
+            new_element_close.className = "close_open_photo";
             new_element_div.className = "div_open_photo";
             new_element_photo.className = "img_open_photo";
 
             new_element_div.style.display = "flex";
+            new_element_div.style.flexDirection = "column";
             new_element_div.style.justifyContent = "center";
             new_element_div.style.alignItems = "center";
             new_element_div.style.backgroundColor = "rgba(0, 0, 0, 0.7)"
@@ -133,57 +142,72 @@ function func_open_photo(){
             new_element_div.style.left = "0";
 
             new_element_photo.src = photo.src;
-            new_element_photo.style.height = screenHeight.toString() + "px";
+            new_element_photo.style.objectFit = "contain";
+            new_element_photo.style.maxHeight = (screen_height*0.9).toString() + "px";
+            new_element_photo.style.maxWidth = "90%";
+            new_element_photo.style.margin = "10%";
+
+            new_element_close.innerHTML = "&#x2715";
+            new_element_close.style.position = "fixed";
+            new_element_close.style.top = "0";
+            new_element_close.style.right = "0";
+            new_element_close.style.margin = "20px";
+            new_element_close.style.fontSize = "20px";
+            new_element_close.style.background = "#e9e9f3";
+            new_element_close.style.border = "5px solid #e9e9f3";
 
             footer.after(new_element_div);
         })
     });
 
-    new_element_div.addEventListener("click", () => {
+    new_element_close.addEventListener("click", () => {
         new_element_div.remove();
     });
 }
 
 
-//====================
-//    Void all func   
-//====================
+/*====================*/
+/*    Void all func   */
+/*====================*/
 function Arrows(){
-    var lift_arrow_1 = document.querySelector(".my_works .videos .left_arrow");
-    var right_arrow_1 = document.querySelector(".my_works .videos .right_arrow");
-    var list_video_1 = Array.from(document.querySelectorAll(".my_works .videos .video"));
+    let lift_arrow_1 = document.querySelector(".block_diploms_photo .photos .photo_for_height .left_arrow");
+    let right_arrow_1 = document.querySelector(".block_diploms_photo .photos .photo_for_height .right_arrow");
+    let list_photo_1 = Array.from(document.querySelectorAll(".block_diploms_photo .photos .photo_for_height .photo"));
 
-    var lift_arrow_2 = document.querySelector(".procedure_photos .photo_scroll .left_arrow");
-    var right_arrow_2 = document.querySelector(".procedure_photos .photo_scroll .right_arrow");
-    var list_video_2 = Array.from(document.querySelectorAll(".procedure_photos .photo_scroll .photo"));
+    let lift_arrow_2 = document.querySelector(".procedure_photos .photo_scroll .left_arrow");
+    let right_arrow_2 = document.querySelector(".procedure_photos .photo_scroll .right_arrow");
+    let list_photo_2 = Array.from(document.querySelectorAll(".procedure_photos .photo_scroll .photo"));
 
 
-    func_scroll(lift_arrow_1, right_arrow_1, list_video_1, true, "block");
-    func_scroll(lift_arrow_2, right_arrow_2, list_video_2, false, "flex");
+    func_scroll(lift_arrow_1, right_arrow_1, list_photo_1, false, "flex"); 
+    func_scroll(lift_arrow_2, right_arrow_2, list_photo_2, false, "flex");
+
+    /*---Logic for videos---*/
+    // func_scroll(lift_arrow_1, right_arrow_1, list_video_1, true, "block");
 }
 
-//====================
-//    Void all func   
-//====================
+/*====================*/
+/*    Void all func   */
+/*====================*/
 function window_make_appointment(){
-    var left_button = document.querySelector(".left_button");
-    var window_make_appointment = document.querySelector(".window_make_appointment");
+    let left_button = document.querySelector(".left_button");
+    let window_make_appointment = document.querySelector(".window_make_appointment");
 
     left_button.addEventListener("click", () => {
         window_make_appointment.style.display = "flex";
     });
 }
 
-//==============================
-//    loade height for video    
-//==============================
+/*==============================*/
+/*    loade height for video    */
+/*==============================*/
 function loade_height_video(){
     const videos = document.querySelectorAll(".video");
 
     videos.forEach((video, i) => {
         video.addEventListener("loadedmetadata", () => {
             const { width, height } = video.getBoundingClientRect();
-    
+            
             if (videos[i + 1]) {
                 videos[i + 1].style.width = `${width}px`;
                 videos[i + 1].style.height = `${height}px`;
@@ -198,11 +222,10 @@ func_open_photo();
 window_make_appointment();
 // loade_height_video();
 
-/*
-========================
-    Additional  code    
-========================
-*/
+/*========================*/
+/*    Additional  code    */
+/*========================*/
+
 function none(){
     // - var имеет область видимости функции.
     // - let имеет блочную область видимости.
